@@ -186,7 +186,7 @@ void Huffman<Node>::selectNode(Node* node, int& r1, int& r2,int currsize)
 	}
 	if(r1==r2)
 	{
-		r2=r2+1;
+		while(node[++r2].getParent()!=NULL);
 	}
 	for (int i = r2; i<currsize-1; i++)
 	{
